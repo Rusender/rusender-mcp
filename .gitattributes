@@ -1,0 +1,3 @@
+# Шаблоны отчётов — это документация, а не исходный код проекта
+skills/**/assets/*.html linguist-documentation
+docs/** linguist-documentation
