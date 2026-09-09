@@ -23,8 +23,5 @@ jobs:
       - name: Authenticate via OIDC
         run: ./mcp-publisher login github-oidc
 
-      - name: Validate server.json
-        run: ./mcp-publisher publish --dry-run
-
       - name: Publish
         run: ./mcp-publisher publish
