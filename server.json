@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Rusender/rusender-mcp",
+  "title": "RuSender",
+  "description": "Manage email campaigns, contacts and deliverability analytics in RuSender from an AI assistant.",
+  "version": "1.0.0",
+  "websiteUrl": "https://rusender.ru/features/email/mcp/",
+  "repository": {
+    "url": "https://github.com/Rusender/rusender-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.rusender.ru/mcp"
+    }
+  ]
+}
