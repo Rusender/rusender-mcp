@@ -1,5 +1,5 @@
 ---
-name: rusender-ab-provider-test
+name: rusender-ab-provider
 description: >-
   Создаёт и анализирует «мульти-провайдерный» A/B-тест тем письма в RuSender: делит базу
   сегментами по почтовым системам (Gmail, Mail.ru, Yandex и «все остальные») и запускает
