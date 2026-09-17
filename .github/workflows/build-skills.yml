@@ -1,0 +1,45 @@
+name: Build skill archives
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "skills/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Zip each skill
+        run: |
+          mkdir -p dist
+          for d in skills/*/; do
+            name=$(basename "$d")
+            # пропускаем служебные папки и всё, что не является навыком
+            [ "$name" = "all" ] && continue
+            [ -f "$d/SKILL.md" ] || { echo "пропущен $name — нет SKILL.md"; continue; }
+            (cd skills && zip -qr "../dist/$name.zip" "$name" -x "*.DS_Store")
+            echo "собран $name.zip"
+          done
+          echo "---"
+          ls -lh dist
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: skills-latest
+          name: Навыки RuSender
+          body: |
+            Архивы навыков, собранные автоматически из ветки master.
+            Ссылки постоянные и всегда отдают актуальную версию.
+
+            Обновлено: ${{ github.event.head_commit.timestamp }}
+          files: dist/*.zip
+          make_latest: false
