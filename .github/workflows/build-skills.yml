@@ -40,6 +40,6 @@ jobs:
             Архивы навыков, собранные автоматически из ветки master.
             Ссылки постоянные и всегда отдают актуальную версию.
 
-            Обновлено: ${{ github.event.head_commit.timestamp }}
+            Обновлено: ${{ github.run_started_at }}
           files: dist/*.zip
           make_latest: false
