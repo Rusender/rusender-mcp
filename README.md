@@ -64,18 +64,22 @@ MCP-сервер [RuSender](https://rusender.ru/) и готовые агентс
 Навык — это готовый сценарий работы: вы просите «собери отчёт по рассылке», а ассистент
 знает, какие инструменты вызвать, в каком порядке и как оформить результат.
 
-| Навык | Что делает |
-|---|---|
-| [rusender-account-report](skills/rusender-account-report/) | Дашборд-обзор аккаунта: база, объёмы отправок, инфраструктура, проблемы конфигурации |
-| [rusender-campaign-report](skills/rusender-campaign-report/) | Разбор одной рассылки: воронка, динамика открытий, клики, доставляемость |
-| [rusender-ab-report](skills/rusender-ab-report/) | Отчёт по A/B-тесту: варианты тем, победитель, матрица «тема × провайдер» |
-| [rusender-ab-provider-test](skills/rusender-ab-provider-test/) | Мульти-провайдерный A/B-тест: делит базу на Gmail / Mail.ru / Yandex / остальные |
-| [rusender-campaign-timeline](skills/rusender-campaign-timeline/) | Вертикальный таймлайн отправок: что и когда уходило, где были паузы |
-| [rusender-campaign-cleanup](skills/rusender-campaign-cleanup/) | Архивирует заблокированные и отклонённые модератором рассылки |
+| Навык | Что делает | Скачать |
+|---|---|---|
+| [rusender-account-report](skills/rusender-account-report/) | Дашборд-обзор аккаунта: база, объёмы отправок, инфраструктура, проблемы конфигурации | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-account-report.zip) |
+| [rusender-campaign-report](skills/rusender-campaign-report/) | Разбор одной рассылки: воронка, динамика открытий, клики, доставляемость | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-campaign-report.zip) |
+| [rusender-ab-report](skills/rusender-ab-report/) | Отчёт по A/B-тесту: варианты тем, победитель, матрица «тема × провайдер» | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-ab-report.zip) |
+| [rusender-ab-provider](skills/rusender-ab-provider/) | Мульти-провайдерный A/B-тест: делит базу на Gmail, Mail.ru, Yandex и остальных | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-ab-provider.zip) |
+| [rusender-campaign-timeline](skills/rusender-campaign-timeline/) | Таймлайн отправок: что и когда уходило, по какому списку и с каким результатом | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-campaign-timeline.zip) |
+| [rusender-campaign-cleanup](skills/rusender-campaign-cleanup/) | Архивирует заблокированные и отклонённые модератором рассылки | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-campaign-cleanup.zip) |
+| [rusender-campaign-create](skills/rusender-campaign-create/) | Создание рассылки по шагам: отправитель, домен, списки, шаблон, темы | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-campaign-create.zip) |
+| [rusender-key-dashboard](skills/rusender-key-dashboard/) | Дашборд по транзакционному ключу: доставляемость, OR и CTR, ошибки, тематики | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-key-dashboard.zip) |
+| [rusender-send-date-oracle](skills/rusender-send-date-oracle/) | Шуточный оракул: дата отправки по нумерологии, фазе Луны и дню недели | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-send-date-oracle.zip) |
+| [rusender-japanese-style](skills/rusender-japanese-style/) | Письмо в японском стиле: сезонная палитра, погода в городе получателя, хайку | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-japanese-style.zip) |
 
 Установка и подробности — [`skills/README.md`](skills/README.md).
-Каждый навык также можно скачать ZIP-архивом
-[со страницы MCP](https://rusender.ru/features/email/mcp/).
+Архивы собираются автоматически из папок навыков, ссылки всегда отдают актуальную версию.
+Те же навыки есть [на странице MCP](https://rusender.ru/features/email/mcp/).
 
 ## Совместимость
 
