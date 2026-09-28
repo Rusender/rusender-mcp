@@ -11,6 +11,6 @@
   "homepage": "https://rusender.ru/features/email/mcp/",
   "repository": "https://github.com/Rusender/rusender-mcp",
   "license": "MIT",
-  "logo": "assets/logo.png",
+  "logo": "assets/logo-512.png",
   "keywords": ["email", "email-marketing", "рассылки", "маркетинг", "аналитика", "crm"]
 }
