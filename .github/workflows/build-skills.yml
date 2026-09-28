@@ -5,24 +5,38 @@ on:
     branches: [master]
     paths:
       - "skills/**"
+  pull_request:
+    paths:
+      - "skills/**"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
+      - uses: actions/checkout@v5
 
-      - name: Zip each skill
+      - name: Установить PyYAML
+        run: pip install --quiet pyyaml
+
+      - name: Проверить навыки
+        run: bash scripts/check-skills.sh
+
+  build:
+    needs: check
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Собрать архивы
         run: |
           mkdir -p dist
           for d in skills/*/; do
             name=$(basename "$d")
-            # пропускаем служебные папки и всё, что не является навыком
             [ "$name" = "all" ] && continue
             [ -f "$d/SKILL.md" ] || { echo "пропущен $name — нет SKILL.md"; continue; }
             (cd skills && zip -qr "../dist/$name.zip" "$name" -x "*.DS_Store")
@@ -31,7 +45,7 @@ jobs:
           echo "---"
           ls -lh dist
 
-      - name: Publish release
+      - name: Опубликовать релиз
         uses: softprops/action-gh-release@v2
         with:
           tag_name: skills-latest
