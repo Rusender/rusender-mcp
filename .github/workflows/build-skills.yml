@@ -57,3 +57,35 @@ jobs:
             Обновлено: ${{ github.run_started_at }}
           files: dist/*.zip
           make_latest: false
+
+      - name: Напомнить, что обновить руками
+        run: |
+          REL="https://github.com/${{ github.repository }}/releases/download/skills-latest"
+          {
+            echo "## Архивы пересобраны"
+            echo ""
+            echo "| Навык | Ссылка |"
+            echo "|---|---|"
+            for f in dist/*.zip; do
+              n=$(basename "$f" .zip)
+              echo "| \`$n\` | [$n.zip]($REL/$n.zip) |"
+            done
+            echo ""
+            echo "## Что обновить руками"
+            echo ""
+            echo "Архивы и релиз обновились сами. Остальное нужно поправить вручную:"
+            echo ""
+            echo "- [ ] Таблица в \`README.md\`"
+            echo "- [ ] Таблица и версия в \`skills/README.md\`"
+            echo "- [ ] Запись в \`CHANGELOG.md\`"
+            echo "- [ ] Карточка на [странице MCP](https://rusender.ru/features/email/mcp/)"
+            echo "- [ ] Карточка в [каталоге навыков](https://rusender.ru/features/email/mcp/skills-catalog/)"
+            echo "- [ ] Страница инструкции на сайте"
+            echo "- [ ] Строка в [таблице учёта](https://docs.google.com/spreadsheets/d/1HYOxvS10hlYmnEZWfax7JvJk0dgOQIJTbXEkbSc2GAs/edit)"
+            echo "- [ ] Re-scan в [Cursor Directory](https://cursor.directory/plugins/rusender)"
+            echo ""
+            echo "Если переименовали папку — ссылки на сайте, в каталоге и в таблице учёта"
+            echo "сломались, их надо поменять."
+            echo ""
+            echo "Полный регламент: [docs/skills-workflow.md](https://github.com/${{ github.repository }}/blob/master/docs/skills-workflow.md)"
+          } >> "$GITHUB_STEP_SUMMARY"
