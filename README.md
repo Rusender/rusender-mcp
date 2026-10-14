@@ -12,12 +12,8 @@ MCP-сервер [RuSender](https://rusender.ru/) и готовые агентс
 ИИ:  ✓ выбрал список  ✓ собрал рассылку  ✓ отправил  ✓ подготовил отчёт
      Готово. Рассылка отправлена 4 218 подписчикам, доставка 100%.
 ```
-> **English summary.** RuSender is a Russian email marketing platform. This plugin connects
-> Claude to your RuSender account via a remote MCP server (OAuth, no API keys) and bundles
-> 10 skills for campaign creation, campaign and account reports, A/B tests, send timelines
-> and cleanup. A free RuSender account is enough to connect; sending real emails requires a
-> verified sender or domain. One skill (`rusender-japanese-style`) fetches weather from
-> Open-Meteo; everything else talks only to `mcp.rusender.ru`.
+RuSender is a Russian email marketing platform. This plugin connects
+Claude to your RuSender account via a remote MCP server (OAuth, no API keys) and bundles 10 skills for campaign creation, campaign and account reports, A/B tests, send timelines and cleanup. A free RuSender account is enough to connect; sending real emails requires a verified sender or domain; everything else talks only to `mcp.rusender.ru`.
 
 ## Быстрый старт
 
