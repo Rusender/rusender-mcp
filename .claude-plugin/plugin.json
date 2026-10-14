@@ -1,0 +1,15 @@
+{
+  "name": "rusender",
+  "displayName": "RuSender",
+  "version": "1.0.0",
+  "description": "Управление email-рассылками RuSender из ассистента: статистика кампаний, база контактов, сегменты, A/B-тесты, домены и доставляемость.",
+  "author": {
+    "name": "RuSender",
+    "email": "support@rusender.ru",
+    "url": "https://rusender.ru"
+  },
+  "homepage": "https://rusender.ru/features/email/mcp/",
+  "repository": "https://github.com/Rusender/rusender-mcp",
+  "license": "MIT",
+  "keywords": ["email", "email-marketing", "рассылки", "маркетинг", "аналитика"]
+}
