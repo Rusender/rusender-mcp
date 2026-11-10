@@ -1,6 +1,6 @@
 # RuSender: таймлайн рассылок
 
-**Версия:** 1.8.0 · **Лицензия:** MIT · Требует подключённого MCP-коннектора
+**Версия:** 1.9.0 · **Лицензия:** MIT · Требует подключённого MCP-коннектора
 [RuSender](https://rusender.ru/features/email/mcp/)
 
 Строит вертикальный таймлайн рассылок аккаунта RuSender: хронику кампаний снизу вверх, где каждая запись — дата, время, тип рассылки, название, статус и её собственные метрики, а между записями видны паузы в отправках.
@@ -28,7 +28,7 @@ https://rusender.ru/features/email/mcp/skill-timeline/
 ```
 rusender-campaign-timeline/
 ├── SKILL.md
-├── assets/timeline-template.html
+├── references/timeline-template.md
 ├── references/palette.md
 ```
 

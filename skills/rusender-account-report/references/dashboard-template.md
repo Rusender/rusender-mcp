@@ -1,5 +1,20 @@
-<title>Аккаунт RuSender — общий обзор</title>
-<style>
+# Эталон вёрстки: общий обзор аккаунта
+
+Утверждённый дизайн отчёта в виде образца на данных примера. Это **образец**, а не готовый файл:
+страница собирается заново, данные примера заменяются реальными.
+
+## Как собрать страницу
+1. Тег title — по образцу: `Аккаунт RuSender — общий обзор` (подставь реальные названия и даты).
+2. Тег style — весь CSS из раздела «CSS» дословно, блоки по порядку. Не меняй ни одного значения.
+3. Разметка — по разделу «Разметка»: те же разделы, порядок, классы, подписи и элементы
+   интерфейса. Меняются только данные: числа, проценты, даты, названия, количество строк,
+   столбцов и элементов в списках, ширины и высоты полос, координаты фигур в SVG.
+
+Запреты на изменение вёрстки — в SKILL.md, раздел «Вёрстка … не меняется».
+
+## CSS, блок 1
+
+```css
   :root{
     --ground:#f6f8fb; --card:#ffffff; --ink:#17202e; --muted:#5f6b7a;
     --line:#e3e8f0; --accent:#2563eb; --accent-ink:#ffffff;
@@ -182,9 +197,11 @@
   footer{margin-top:38px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}footer b{color:var(--ink)}
   @media (max-width:900px){.kpis{grid-template-columns:repeat(4,1fr)}.cols,.insights{grid-template-columns:1fr}.risk{grid-template-columns:1fr}}
   @media (max-width:520px){.kpis{grid-template-columns:repeat(2,1fr)}.frow{grid-template-columns:72px 1fr}.frow .fmeta{grid-column:2}.tlval{display:none}}
-</style>
+```
 
-<style>
+## CSS, блок 2
+
+```css
   /* СМЫСЛ ВЕДЁТ ЦВЕТ.
      Светофор - только на сущности, у которых есть хорошо/плохо:
        зелёный  = живое, доставленное, верифицированное
@@ -255,8 +272,13 @@
   .toplist .tbar i{display:block;height:100%;border-radius:4px;background:var(--blue)}
   .toplist .tv{font-size:14.5px;font-weight:800;color:var(--blue);font-variant-numeric:tabular-nums;text-align:right}
   @media (max-width:900px){.mini-facts{grid-template-columns:repeat(2,1fr)}.toplist{grid-template-columns:auto 1fr auto;row-gap:8px}.toplist .tbar{display:none}.toplist .td{grid-column:2}}
-</style>
+```
 
+## Разметка
+
+Образец на данных примера.
+
+```html
 <div class="wrap"><div class="inner">
 
   <header>
@@ -477,3 +499,4 @@
   </footer>
 
 </div></div>
+```
