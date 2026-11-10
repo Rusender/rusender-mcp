@@ -4,6 +4,21 @@
 
 ## [Unreleased]
 
+### Изменено
+- Репозиторий приведён к требованиям каталога плагинов Claude: только Markdown, JSON, YAML,
+  текст и картинки.
+- HTML-шаблоны навыков перенесены в `references/*.md`: `rusender-ab-report` (1.1.0, шаблон
+  описан спецификацией), `rusender-account-report` (1.16.0), `rusender-campaign-report` (1.1.0),
+  `rusender-campaign-timeline` (1.9.0), `rusender-send-date-oracle` (1.2.0).
+- `rusender-japanese-style` (1.1.0) работает без скриптов: погода и сборка письма описаны в
+  `references/weather.md` и `references/letter-template.md`, цвет хайку заранее посчитан
+  в `seasons.json`.
+- Иконка плагина: путь в `.claude-plugin/plugin.json` исправлен на `./assets/logo-512.png`.
+
+### Удалено
+- GitHub Actions: сборка архивов навыков, публикация в реестр MCP, зеркало в GitVerse.
+- Скрипты `scripts/check-skills.sh`, `scripts/check-registry-version.py`.
+
 ## [2026-09-17]
 
 ### Добавлено

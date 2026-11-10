@@ -1,6 +1,6 @@
 # RuSender: дашборд-обзор аккаунта
 
-**Версия:** 1.15.0 · **Лицензия:** MIT · Требует подключённого MCP-коннектора
+**Версия:** 1.16.0 · **Лицензия:** MIT · Требует подключённого MCP-коннектора
 [RuSender](https://rusender.ru/features/email/mcp/)
 
 Собирает визуальный дашборд-обзор аккаунта RuSender: здоровье базы контактов, объёмы отправок, инфраструктура (домены, отправители, ключи, вебхуки, списки, сегменты, шаблоны, цепочки), лучшие отдельные рассылки и фактические проблемы конфигурации.
@@ -28,7 +28,7 @@ https://rusender.ru/features/email/mcp/skill-account-analyst/
 ```
 rusender-account-report/
 ├── SKILL.md
-├── assets/dashboard-template.html
+├── references/dashboard-template.md
 ├── references/palette.md
 ```
 
