@@ -2,15 +2,102 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "rusender",
   "displayName": "RuSender",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Управление email-рассылками RuSender из ассистента: статистика кампаний, база контактов, сегменты, A/B-тесты, домены и доставляемость.",
   "author": {
-    "name": "RuSender",
-    "email": "support@rusender.ru"
+    "name": "UCOZ Ltd.",
+    "email": "support@rusender.ru",
+    "url": "https://rusender.ru"
   },
   "homepage": "https://rusender.ru/features/email/mcp/",
   "repository": "https://github.com/Rusender/rusender-mcp",
   "license": "MIT",
   "logo": "assets/logo-512.png",
-  "keywords": ["email", "email-marketing", "рассылки", "маркетинг", "аналитика", "crm"]
+  "keywords": ["email", "email-marketing", "рассылки", "маркетинг", "аналитика", "crm"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "RuSender",
+        "shortDescription": "Email campaigns in chat",
+        "longDescription": "RuSender is a Russian email marketing platform for marketing campaigns and transactional email. This plugin connects ChatGPT to your RuSender account through a remote MCP server so you can build, launch and analyze campaigns without leaving the chat.\n\nWhat it covers:\n- Campaigns: create drafts, attach templates, senders and contact lists, preview audience splits, send now or on schedule, run A/B subject-line tests, send in growing daily chunks, resend to non-openers, archive and organize into folders.\n- Contacts and lists: search, read and update contacts, import up to 1000 rows per call with custom variables, move contacts between lists, unsubscribe and resubscribe, view per-contact sending history.\n- Segments and variables: build dynamic segments by conditions, define custom contact fields per list.\n- Transactional email: send by key with inline HTML or a saved template, list past sends with delivery status, aggregated stats per key.\n- Deliverability: add sending domains, get DKIM/SPF/DMARC records, verify DNS, manage senders and webhooks.\n- Analytics: campaign funnel, opens and clicks over time, per-link clicks, stats by recipient mail provider (Gmail, Mail.ru, Yandex and others).\n\nThe plugin also bundles skills for campaign creation, campaign and account reports, A/B tests, send timelines and cleanup.\n\nAuthorization is OAuth 2.1 with PKCE: each user signs in to their own RuSender account and can revoke access at any time. A free RuSender account is enough to connect; sending real email requires a confirmed sender address or a verified sending domain. Sending and deletion tools are annotated as destructive, so ChatGPT asks for confirmation before running them. The interface of RuSender itself is in Russian.",
+        "developerName": "UCOZ Ltd.",
+        "category": "Business",
+        "capabilities": [
+          "Create, schedule and send email campaigns",
+          "Run A/B subject-line tests",
+          "Manage contacts, lists and segments",
+          "Send transactional email by key",
+          "Check sending domains and DKIM/SPF/DMARC",
+          "Analyze campaign funnels, clicks and mail providers"
+        ],
+        "websiteURL": "https://rusender.ru/",
+        "supportURL": "https://rusender.ru/support/",
+        "privacyPolicyURL": "https://rusender.ru/legal/privacy-policy/",
+        "termsOfServiceURL": "https://rusender.ru/legal/agreement/",
+        "defaultPrompt": [
+          "Show my RuSender contact lists and how many contacts each has",
+          "Analyze my latest email campaign: funnel, clicks and results by mail provider",
+          "Check my sending domains and their DKIM, SPF and DMARC status"
+        ],
+        "logo": "./assets/logo-512.png",
+        "composerIcon": "./assets/logo-512.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "List contact lists with contact counts",
+              "prompt": "Show my contact lists and how many contacts are in each",
+              "tools_triggered": "public_lists_list",
+              "expected_behavior": "Returns the lists of the test account with their names and contact counts."
+            },
+            {
+              "description": "List campaigns with statistics",
+              "prompt": "Show all my email campaigns with their statistics",
+              "tools_triggered": "public_campaigns_list",
+              "expected_behavior": "Returns the campaigns of the test account with sent, delivered, opens and clicks."
+            },
+            {
+              "description": "Analyze a campaign funnel",
+              "prompt": "Analyze the funnel of campaign <CAMPAIGN_ID>",
+              "tools_triggered": "public_campaigns_get_by_id, public_campaigns_get_activity",
+              "expected_behavior": "Returns sent, delivered, opened and clicked counts plus activity over time for the given campaign."
+            },
+            {
+              "description": "Create a list, a custom field and import contacts",
+              "prompt": "Create a list named ChatGPT Review, add a custom field City and import 10 contacts with names and cities",
+              "tools_triggered": "public_lists_create, public_variables_create, public_lists_contacts_import",
+              "expected_behavior": "ChatGPT asks for confirmation before writing; the list is created, the field is added and 10 contacts are imported with their City values."
+            },
+            {
+              "description": "Check sending domains and DNS records",
+              "prompt": "Show my sending domains and the status of their DKIM, SPF and DMARC records",
+              "tools_triggered": "public_domains_list",
+              "expected_behavior": "Returns the domains of the test account with their DNS records and verification status."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Send a campaign without specifying which one and without confirmation",
+              "prompt": "Send a campaign to all my contacts right now"
+            },
+            {
+              "description": "Payment or money transfer request",
+              "prompt": "Pay for my RuSender plan with my card"
+            },
+            {
+              "description": "Access data of another RuSender account",
+              "prompt": "Show me the contacts from another RuSender account"
+            }
+          ]
+        },
+        "demo_recording_url": "https://REPLACE-WITH-VIDEO-URL",
+        "commerce": false,
+        "commerce_description": "This plugin does not sell products, subscriptions or services and does not process payments."
+      },
+      "publication": {
+        "release_notes": "Initial submission. RuSender remote MCP server (Streamable HTTP, OAuth 2.1 with PKCE) with tools for email campaigns, contacts and lists, segments, transactional email, sending domains (DKIM/SPF/DMARC), webhooks and analytics, plus 10 bundled skills. Sending and deletion tools are annotated as destructive."
+      }
+    }
+  }
 }
