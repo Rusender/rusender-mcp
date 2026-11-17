@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "rusender",
-  "displayName": "RuSender",
   "version": "1.0.1",
   "description": "Управление email-рассылками RuSender из ассистента: статистика кампаний, база контактов, сегменты, A/B-тесты, домены и доставляемость.",
   "author": {
@@ -12,7 +11,6 @@
   "homepage": "https://rusender.ru/features/email/mcp/",
   "repository": "https://github.com/Rusender/rusender-mcp",
   "license": "MIT",
-  "logo": "assets/logo-512.png",
   "keywords": ["email", "email-marketing", "рассылки", "маркетинг", "аналитика", "crm"],
   "extensions": {
     "com.openai": {
