@@ -5,6 +5,15 @@
 ## [Unreleased]
 
 ### Изменено
+- Навыки работают одной версией и в Claude, и в ChatGPT. Отчётные навыки выбирают способ
+  выдачи по доступным инструментам: публикация артефакта (как раньше в Claude), HTML-файл
+  (ChatGPT с анализом данных, Claude Code) или отчёт в чате. Ветка публикации для Claude
+  не изменилась: `rusender-campaign-report` (1.2.0), `rusender-ab-report` (1.2.0),
+  `rusender-account-report` (1.17.0), `rusender-campaign-timeline` (1.10.0),
+  `rusender-send-date-oracle` (1.3.0), `rusender-japanese-style` (1.2.0).
+- `rusender-key-dashboard` (1.1.0) больше не требует скиллов `sites-building`/`sites-hosting`:
+  использует их, если они есть (ChatGPT), иначе — публикацию артефакта, файл или отчёт в чате.
+- `plugin.json` 1.0.2: в описание для ChatGPT добавлены все 10 навыков.
 - Репозиторий приведён к требованиям каталога плагинов Claude: только Markdown, JSON, YAML,
   текст и картинки.
 - HTML-шаблоны навыков перенесены в `references/*.md`: `rusender-ab-report` (1.1.0, шаблон
