@@ -10,16 +10,16 @@
 
 | Навык | Версия | Что делает | Скачать | Инструкция |
 |---|---|---|---|---|
-| [`rusender-account-report`](rusender-account-report/) | 1.16.0 | Дашборд-обзор аккаунта: база, объёмы отправок, инфраструктура, проблемы конфигурации | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-account-report.zip) | [ссылка](https://rusender.ru/features/email/mcp/skill-account-analyst/) |
-| [`rusender-campaign-report`](rusender-campaign-report/) | 1.1.0 | Разбор одной рассылки: воронка, динамика открытий, клики, доставляемость | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-campaign-report.zip) | [ссылка](https://rusender.ru/features/email/mcp/skill-campaign-report/) |
-| [`rusender-ab-report`](rusender-ab-report/) | 1.1.0 | Отчёт по A/B-тесту: варианты тем, победитель, матрица «тема × провайдер» | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-ab-report.zip) | [ссылка](https://rusender.ru/features/email/mcp/skill-ab/) |
+| [`rusender-account-report`](rusender-account-report/) | 1.17.0 | Дашборд-обзор аккаунта: база, объёмы отправок, инфраструктура, проблемы конфигурации | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-account-report.zip) | [ссылка](https://rusender.ru/features/email/mcp/skill-account-analyst/) |
+| [`rusender-campaign-report`](rusender-campaign-report/) | 1.2.0 | Разбор одной рассылки: воронка, динамика открытий, клики, доставляемость | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-campaign-report.zip) | [ссылка](https://rusender.ru/features/email/mcp/skill-campaign-report/) |
+| [`rusender-ab-report`](rusender-ab-report/) | 1.2.0 | Отчёт по A/B-тесту: варианты тем, победитель, матрица «тема × провайдер» | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-ab-report.zip) | [ссылка](https://rusender.ru/features/email/mcp/skill-ab/) |
 | [`rusender-ab-provider`](rusender-ab-provider/) | 1.0.0 | Мульти-провайдерный A/B-тест: делит базу на Gmail, Mail.ru, Yandex и остальных | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-ab-provider.zip) | [ссылка](https://rusender.ru/features/email/mcp/skill-ab-provider/) |
-| [`rusender-campaign-timeline`](rusender-campaign-timeline/) | 1.9.0 | Таймлайн отправок: что и когда уходило, по какому списку и с каким результатом | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-campaign-timeline.zip) | [ссылка](https://rusender.ru/features/email/mcp/skill-timeline/) |
+| [`rusender-campaign-timeline`](rusender-campaign-timeline/) | 1.10.0 | Таймлайн отправок: что и когда уходило, по какому списку и с каким результатом | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-campaign-timeline.zip) | [ссылка](https://rusender.ru/features/email/mcp/skill-timeline/) |
 | [`rusender-campaign-cleanup`](rusender-campaign-cleanup/) | 1.0.0 | Архивирует заблокированные и отклонённые модератором рассылки | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-campaign-cleanup.zip) | [ссылка](https://rusender.ru/features/email/mcp/skill-cleanup/) |
 | [`rusender-campaign-create`](rusender-campaign-create/) | 1.0.0 | Создание рассылки по шагам: отправитель, домен, списки, шаблон, темы. Сохраняет черновиком | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-campaign-create.zip) | [ссылка](https://rusender.ru/features/email/mcp/skill-campaign-create/) |
-| [`rusender-key-dashboard`](rusender-key-dashboard/) | 1.0.0 | Дашборд по транзакционному ключу: доставляемость, OR и CTR, ошибки, тематики писем | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-key-dashboard.zip) | [ссылка](https://rusender.ru/features/email/mcp/skill-key-dashboard/) |
-| [`rusender-send-date-oracle`](rusender-send-date-oracle/) | 1.2.0 | Шуточный оракул: подбирает дату отправки по нумерологии, фазе Луны и дню недели | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-send-date-oracle.zip) | [ссылка](https://rusender.ru/features/email/mcp/skill-send-date-oracle/) |
-| [`rusender-japanese-style`](rusender-japanese-style/) | 1.1.0 | Шаблон письма в японском стиле: сезонная палитра, реальная погода в городе получателя, хайку | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-japanese-style.zip) | [ссылка](https://rusender.ru/features/email/mcp/skill-japanese-style/) |
+| [`rusender-key-dashboard`](rusender-key-dashboard/) | 1.1.0 | Дашборд по транзакционному ключу: доставляемость, OR и CTR, ошибки, тематики писем | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-key-dashboard.zip) | [ссылка](https://rusender.ru/features/email/mcp/skill-key-dashboard/) |
+| [`rusender-send-date-oracle`](rusender-send-date-oracle/) | 1.3.0 | Шуточный оракул: подбирает дату отправки по нумерологии, фазе Луны и дню недели | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-send-date-oracle.zip) | [ссылка](https://rusender.ru/features/email/mcp/skill-send-date-oracle/) |
+| [`rusender-japanese-style`](rusender-japanese-style/) | 1.2.0 | Шаблон письма в японском стиле: сезонная палитра, реальная погода в городе получателя, хайку | [ZIP](https://github.com/Rusender/rusender-mcp/releases/download/skills-latest/rusender-japanese-style.zip) | [ссылка](https://rusender.ru/features/email/mcp/skill-japanese-style/) |
 
 ## Установка
 
@@ -37,6 +37,10 @@ cp -r skills/rusender-campaign-report .claude/skills/        # проектны�
 ```bash
 cp -r skills/rusender-* ~/.claude/skills/
 ```
+
+### ChatGPT
+
+Навыки входят в плагин RuSender — отдельно устанавливать не нужно.
 
 ### claude.ai
 
@@ -58,9 +62,11 @@ cp -r skills/rusender-* ~/.claude/skills/
 
 ## Ограничения
 
-- Навыки рассчитаны на **Claude Code** и **claude.ai** с подключённым MCP-коннектором.
+- Навыки рассчитаны на **Claude Code**, **claude.ai** и **ChatGPT** (в составе плагина RuSender)
+  с подключённым MCP-коннектором.
 - Для дистрибуции через **Claude API** не подходят: там песочница без сети и без внешних коннекторов.
-- Отчётные навыки публикуют результат артефактом, поэтому клиент должен уметь их отображать.
+- Отчётные навыки публикуют результат артефактом, если клиент это умеет; иначе отдают HTML-файл
+  или отчёт в чате.
 - `rusender-send-date-oracle` работает и без MCP. `rusender-japanese-style` обращается к
   внешнему сервису погоды Open-Meteo.
 
