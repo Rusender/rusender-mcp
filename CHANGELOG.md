@@ -22,7 +22,7 @@
 - `rusender-japanese-style` (1.1.0) работает без скриптов: погода и сборка письма описаны в
   `references/weather.md` и `references/letter-template.md`, цвет хайку заранее посчитан
   в `seasons.json`.
-- Иконка плагина: путь в `.claude-plugin/plugin.json` исправлен на `./assets/logo-512.png`.
+- Иконка плагина: исправлен путь в манифесте Claude.
 
 ### Удалено
 - GitHub Actions: сборка архивов навыков, публикация в реестр MCP, зеркало в GitVerse.
