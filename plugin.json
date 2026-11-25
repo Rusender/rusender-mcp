@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "rusender",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Управление email-рассылками RuSender из ассистента: статистика кампаний, база контактов, сегменты, A/B-тесты, домены и доставляемость.",
   "author": {
     "name": "UCOZ Ltd.",
@@ -19,15 +19,8 @@
         "shortDescription": "Email campaigns in chat",
         "longDescription": "RuSender is a Russian email marketing platform for marketing campaigns and transactional email. This plugin connects ChatGPT to your RuSender account through a remote MCP server so you can build, launch and analyze campaigns without leaving the chat.\n\nWhat it covers:\n- Campaigns: create drafts, attach templates, senders and contact lists, preview audience splits, send now or on schedule, run A/B subject-line tests, send in growing daily chunks, resend to non-openers, archive and organize into folders.\n- Contacts and lists: search, read and update contacts, import up to 1000 rows per call with custom variables, move contacts between lists, unsubscribe and resubscribe, view per-contact sending history.\n- Segments and variables: build dynamic segments by conditions, define custom contact fields per list.\n- Transactional email: send by key with inline HTML or a saved template, list past sends with delivery status, aggregated stats per key.\n- Deliverability: add sending domains, get DKIM/SPF/DMARC records, verify DNS, manage senders and webhooks.\n- Analytics: campaign funnel, opens and clicks over time, per-link clicks, stats by recipient mail provider (Gmail, Mail.ru, Yandex and others).\n\nThe plugin also bundles skills: step-by-step campaign creation, A/B subject-line tests split by mail provider, campaign list cleanup, and visual reports for a single campaign, an A/B test, the whole account, a campaign timeline and a transactional sending key, plus a seasonal Japanese-style email template and a tongue-in-cheek send-date oracle. Reports are delivered as an HTML file or as tables in the chat.\n\nAuthorization is OAuth 2.1 with PKCE: each user signs in to their own RuSender account and can revoke access at any time. A RuSender account is required to connect; sending real email also requires a confirmed sender address or a verified sending domain. Sending and deletion tools are annotated as destructive, so ChatGPT asks for confirmation before running them. The interface of RuSender itself is in Russian.",
         "developerName": "UCOZ Ltd.",
-        "category": "Business",
-        "capabilities": [
-          "Create, schedule and send email campaigns",
-          "Run A/B subject-line tests",
-          "Manage contacts, lists and segments",
-          "Send transactional email by key",
-          "Check sending domains and DKIM/SPF/DMARC",
-          "Analyze campaign funnels, clicks and mail providers"
-        ],
+        "category": "Productivity",
+        "capabilities": ["Read", "Write"],
         "websiteURL": "https://rusender.ru/",
         "supportURL": "https://rusender.ru/support/",
         "privacyPolicyURL": "https://rusender.ru/legal/privacy-policy/",
