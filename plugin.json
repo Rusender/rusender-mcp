@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "rusender",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Управление email-рассылками RuSender из ассистента: статистика кампаний, база контактов, сегменты, A/B-тесты, домены и доставляемость.",
   "author": {
     "name": "UCOZ Ltd.",
@@ -50,9 +50,9 @@
             },
             {
               "description": "Analyze a campaign funnel",
-              "prompt": "Analyze the funnel of campaign <CAMPAIGN_ID>",
+              "prompt": "Analyze the funnel of campaign 120151",
               "tools_triggered": "public_campaigns_get_by_id, public_campaigns_get_activity",
-              "expected_behavior": "Returns sent, delivered, opened and clicked counts plus activity over time for the given campaign."
+              "expected_behavior": "Returns sent, delivered, opened and clicked counts plus activity over time for campaign 120151 (a finished campaign in the demo account)."
             },
             {
               "description": "Create a list, a custom field and import contacts",
